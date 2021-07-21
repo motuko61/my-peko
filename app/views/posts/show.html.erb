@@ -6,10 +6,10 @@
       <span><%= image_tag 'k0270_4.png' %></span>
       <ul class="more_list">
         <li>
-          <%= link_to '編集', "#", method: :get %>
+          <%= link_to '編集', edit_post_path(@post), method: :get %>
         </li>
         <li>
-          <%= link_to '削除', "#", method: :delete %>
+          <%= link_to '削除', post_path(@post), method: :delete %>
         </li>
       </ul>
     </div>
