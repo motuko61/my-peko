@@ -1,0 +1,84 @@
+<div class="posts-contents">
+
+<div class="posts-main">
+  <h2 class="posts-title">
+  <%= form_with model: @post, url: post_path(@post), local: true do |f|%>
+  <%#= render 'shared/error_messages', model: f.object%>
+
+  <%# 画像 %>
+  <div class="img-upload">
+    <div class="weight-bold-text">
+        料理、店舗画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+         <%= f.file_field :image, id:"post-image" %>
+      </div>
+    </div>
+    <%# 画像 %>
+    <%# 店名と説明 %>
+    <div class="new-posts">
+      <div class="weight-bold-text">
+        店名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"必須 (20文字まで)", maxlength:"20" %>
+      <div class="comment">
+        <div class="weight-bold-text">
+          コメント
+        
+        </div>
+        <%= f.text_area :comment, class:"items-text", id:"item-info", placeholder:"感想など。" ,rows:"7" ,maxlength:"100" %>
+      </div>
+    </div>
+    <%# 説明 %>
+
+    <%# 詳細 %>
+    <div class="shops-detail">
+      <div class="weight-bold-text">店舗の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div class="weight-bold-text">
+          価格帯
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:price_id, Price.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+    <%# /商品の詳細 %>
+
+    <%# 配送について %>
+    <div class="items-detail">
+      <div class="weight-bold-text question-text">
+        
+        
+      </div>
+      <div class="form">
+        <div class="weight-bold-text">
+          誰と来たいか
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:scene_id, Scene.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+        <div class="weight-bold-text">
+          人に教えるor秘密にする
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:teach_id, Teach.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+    
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+ 
+</div>
