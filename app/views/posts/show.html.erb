@@ -1,6 +1,7 @@
+<%= render "shared/header" %>
 <div class="contents row">
   <div class="content_post" style="background-image: url(<%= "#" %>);">
-    <%# if user_signed_in? && current_user.id == @tweet.user_id %>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
     <div class="more">
       <span><%= image_tag 'k0270_4.png' %></span>
       <ul class="more_list">
@@ -12,32 +13,48 @@
         </li>
       </ul>
     </div>
-  <%# end %>
-    <p><%= "#" %></p>
-    <span class="name">
-  
-        <span>投稿者</span><%= "#" %>
-      </a>
-    </span>
-  </div>
-    <div class="container">
-      <% if user_signed_in? %>
-        <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
-          <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-          <%= form.submit "SEND" %>
-        <% end %>
-      <% else %>
-      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
-      </strong>
-    <% end %>
-    <div class="comments">
-      <h4>＜コメント一覧＞</h4>
-      <%# @comments.each do |comment| %>
-        <p>
-          <strong><%#= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-          <%= "#" %>
-        </p>
-      <%# end %>
+  <% end %>
+    <%# @post.each do |post| %>    
+  <div class="item-show">
+  <div class="item-box">
+ 
+    <h2 class="name">
+      <%= @post.name %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @post.image, class:"item-box-img" %>
+      
+    </div>
+   
+     <div class="item-explain-box">
+      <span><%= @post.comment %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">投稿者</th>
+          <td class="detail-value"><%= @post.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @post.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">価格帯</th>
+          <td class="detail-value"><%= @post.price.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">誰と来たいか</th>
+          <td class="detail-value"><%= @post.scene.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">他人に教えるか</th>
+          <td class="detail-value"><%= @post.teach.name %></td>
+        </tr>
+      </tbody>
+    </table>
     </div>
   </div>
-</div>
+ <%# end %>   
+  </div>
+    

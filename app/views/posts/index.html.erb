@@ -1,25 +1,38 @@
 <div class="main">
- 自分だけのグルメメモ
-<div class="nav">
-<ul class='lists-right'>
-       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-       <% if user_signed_in? %>
-       <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
-       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li> 
-       <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+  <%= render "shared/header" %>
+
+ 
+  <div class="title">
+    <span class="text">MyPeko</span>
+  </div>
+  <div class="content">
+    <%= image_tag "peko.jpg", class:"list-pict" %>
+  </div>
+  <div class="icon">  
+    <%= link_to new_post_path, class: 'purchase-btn' do %>
+    <span class='purchase-btn-text'>投稿する</span>
+    <%= image_tag '食事アイコン.png' , size: '120x45' ,class: "purchase-btn-icon" %>
+    <% end %>
+  </div>
+  <% if user_signed_in? %>
+  <% @posts.each do |post| %>
+   <li class='list'>
+        <%= link_to post_path(post.id) do %>
+        <div class='item-img-content'>
+          <%= image_tag post.image, class: "item-img" %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= post.name %>
+          </h3>
+        </div>
+          <% end %>
       <% end %>
-      <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-      
-    
-    </ul>
-</div>  
+    </li>  
+  <% end %>    
+      <%= render "shared/footer" %>
 
-  <p class="main-title">
-        MyPeko
-  </p>
-
+</div>
 
 
 
@@ -27,8 +40,4 @@
   <%#= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
   <%#= form.submit "検索", class: "search-btn" %>
 <%# end %>
-  <div class="content">
-    <%= image_tag "peko.jpg", class:"list-pict" %>
-  </div>
-
-</div>  
+ 
