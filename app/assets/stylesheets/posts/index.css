@@ -1,0 +1,125 @@
+
+
+.main {
+  background-color: gold;
+  height: 100%;
+  width: 100％;
+  font-size: 20px;
+}
+
+.text {
+  position: absolute;
+  top: 30%; 
+  right: 50%;
+  transform: translate(50%,-50%);
+  text-transform: uppercase;
+  font-family: verdana;
+  font-size: 10em;
+  font-weight: 700;
+  color: black;
+  text-shadow: 1px 1px 1px #919191,
+      1px 2px 1px #919191,
+      1px 3px 1px #919191,
+      1px 4px 1px #919191,
+      1px 5px 1px #919191,
+      1px 6px 1px #919191,
+      1px 7px 1px #919191,
+      1px 8px 1px #919191,
+      1px 9px 1px #919191,
+      1px 10px 1px #919191,
+  1px 18px 6px rgba(16,16,16,0.4),
+  1px 22px 10px rgba(16,16,16,0.2),
+  1px 25px 35px rgba(16,16,16,0.2),
+  1px 30px 60px rgba(16,16,16,0.4);
+}
+
+
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+  margin-top: 35%;
+
+  
+}
+
+.icon {
+  display: flex;
+  align-items: flex-end;
+  padding: 100px, 500px, 100px, 100px;
+  margin-bottom: 300px;
+  margin-top: 10px;
+}
+
+.usericon {
+  display: flex;
+  justify-content: space-between;
+  padding: 500px, 100px;
+
+
+}
+
+
+.item-contents {
+  background-color: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+
+
+.item-contents>.subtitle {
+  background-color: gold;
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+}
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: gold;
+  
+}
+
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+.item-info {
+  background-color: gold;
+  color: black;
+  padding: 1vw;
+}
+
+.item-name {
+  font-size: 2.5vh;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+
