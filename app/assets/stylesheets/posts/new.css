@@ -1,5 +1,6 @@
 /* border-bottom: 1px solid #eee; */
 .posts-contents {
+  background-color: bisque;
   display: flex;
   justify-content: space-around
 }

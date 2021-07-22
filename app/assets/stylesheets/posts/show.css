@@ -10,7 +10,7 @@
 }
 
 .item-box {
-  background-color: #FFF;
+  background-color: beige;
   width: 70vw;
   min-width: 1200px;
   padding: 10vh 15vw;
@@ -29,7 +29,7 @@
   height: 50vh;
   width: 60vw;
   min-height: 500px;
-  background-color: rgb(205, 202, 202);
+  background-color: yellowgreen(205, 202, 202);
   object-fit: contain;
 }
 
@@ -87,7 +87,7 @@
 .detail-item {
   width: 20%;
   background-color: #eee;
-  border: 1px solid #dedede;
+  border: 1px solid yellowgreen;
   font-size: 14px;
   text-align: center;
 }
