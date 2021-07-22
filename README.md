@@ -135,3 +135,8 @@
 ### Association
 - belongs_to :user
 - belongs_to :post
+
+
+# git clone
+ git clone https://github.com/motuko61/my-peko.git
+ Rails_6.0.0

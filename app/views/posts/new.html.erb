@@ -58,8 +58,7 @@
 
     <%# 配送について %>
     <div class="items-detail">
-      <div class="weight-bold-text question-text">
-        
+      <div class="weight-bold-text question-text"> 
         
       </div>
       <div class="form">
@@ -73,7 +72,6 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:teach_id, Teach.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
-    
     <div class="sell-btn-contents">
       <%= f.submit "投稿する" ,class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
