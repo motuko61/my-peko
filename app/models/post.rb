@@ -21,5 +21,5 @@ class Post < ApplicationRecord
     validates :scene_id
     validates :teach_id
   end
-    
+
 end

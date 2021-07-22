@@ -29,14 +29,14 @@
 
   投稿機能(機能)
     投稿したいものを投稿するため(目的)
-    複数枚の画像の投稿、コメント機能、アクティブハッシュでの選択、マップとの連動 (詳細)
+    画像の投稿、コメント機能、アクティブハッシュでの選択、マップとの連動 (詳細)
     投稿画面からフォームに沿って投稿をする。コメント、マップとの連動以外は必須項目とし、入力漏れがあると登録できない(ストーリー)
     ３〜４日(見積もり)
     優先順位：高
 
   編集機能(機能)
     投稿したものを編集するため(目的)
-    複数枚の画像、コメント、選択、マップの位置の編集(詳細)
+    画像、コメント、選択、マップの位置の編集(詳細)
     投稿画面からフォームに沿って投稿をしたものを一部だけでも編集し、再度投稿ができる(ストーリー)
     2日(見積もり)
     優先順位：中
@@ -76,32 +76,26 @@
     4日(見積もり)    
     優先順位：低    
 
+# 実装した機能
+  ユーザー管理機能
+   ログアウト機能[![Image from Gyazo](https://i.gyazo.com/acea7d4b939059d9efe8d72358880fdd.gif)](https://gyazo.com/acea7d4b939059d9efe8d72358880fdd)
+   新規登録機能[![Image from Gyazo](https://i.gyazo.com/864acf3b5475ede9f25c75c47f7d2840.gif)](https://gyazo.com/864acf3b5475ede9f25c75c47f7d2840)
+
+  投稿機能
+    [![Image from Gyazo](https://i.gyazo.com/c850d154a6d549390c3c252c4ce5d36b.gif)](https://gyazo.com/c850d154a6d549390c3c252c4ce5d36b)
+
+  編集機能
+   [![Image from Gyazo](https://i.gyazo.com/fea75f35dcd60dd9a55115103dfc7b7d.gif)](https://gyazo.com/fea75f35dcd60dd9a55115103dfc7b7d)
+
+  削除機能
+    [![Image from Gyazo](https://i.gyazo.com/eba46efbc4fd777988e213f90162de23.gif)](https://gyazo.com/eba46efbc4fd777988e213f90162de23)
 
 
+# 実装予定の機能     
+  検索機能,お気に入り機能,評価機能,mapAPI
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# ER図
+  [![Image from Gyazo](https://i.gyazo.com/0174e9c9e363164a99628a22e1b7bb44.png)](https://gyazo.com/0174e9c9e363164a99628a22e1b7bb44)
 
 # テーブル設計
 
