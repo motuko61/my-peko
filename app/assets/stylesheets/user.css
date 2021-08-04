@@ -24,13 +24,13 @@
 .account-page .account-page__header h2:after {
   content: "";
   display: block;
-  width: 60px;
+  width: 50px;
   margin-top: 5px;
-  border-bottom: 1px solid #38aef0;
+  border-bottom: 1px solid orange;
 }
 .account-page .account-page__header h5 {
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 200;
 }
 .account-page .account-page__header .btn {
@@ -70,7 +70,7 @@
   float: left;
   margin-top: 20px;
   color: #fff;
-  background-color: #38aef0;
+  background-color:orange;
 }
 .account-page .field-label .field_with_errors {
   display: inline-block;
